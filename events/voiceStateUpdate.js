@@ -7,6 +7,7 @@ const COOLDOWN_DURATION = 10000
 module.exports = {
   name: Events.VoiceStateUpdate,
   execute(oldState, newState, telegramBot, chatId) {
+    console.log("Tentativa de envio da msg...")
     try {
       const userId = newState.member.id
       const currentTime = Date.now()
